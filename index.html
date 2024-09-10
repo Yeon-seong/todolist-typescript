@@ -9,13 +9,46 @@
     <title>투두리스트</title>
   </head>
   <body>
-    <header>
-      <h1>투두리스트</h1>
-    </header>
-    <main>
-      <ul class="todo_container"></ul>
-    </main>
-    <footer></footer>
-    <script></script>
+    <h1>투두리스트</h1>
+    <ul id="todo_container"></ul>
+
+    <script>
+      const todoDatas = [
+        {
+          id: 1,
+          todo: "아침먹기",
+        },
+        {
+          id: 2,
+          todo: "점심먹기",
+        },
+        {
+          id: 3,
+          todo: "저녁먹기",
+        }
+      ];
+
+
+      /* ---------- 데이터를 넣어주면 todoList를 만들어주는 함수 ---------- */
+      // 매개변수로 todoDatas를 넣어 분리하면 todoDatas의 의존성을 없앨 수 있다.
+      const todoListRender = (todoDatas) => {
+        const $todoContainer = document.querySelector("#todo_container");
+
+        todoDatas.forEach(todoData => {
+          const $todoLi = document.createElement("li");
+
+          const $todoP = document.createElement("p");
+
+          $todoP.innerText = todoData.todo;
+
+          $todoLi.append($todoP);
+
+          $todoContainer.append($todoLi);
+        });
+      };
+
+
+      todoListRender(todoDatas);
+    </script>
   </body>
 </html>
