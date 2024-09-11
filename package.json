@@ -1,0 +1,25 @@
+{
+  "name": "todolist-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeon-seong/todolist-typescript.git"
+  },
+  "author": "Yeon-seong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yeon-seong/todolist-typescript/issues"
+  },
+  "homepage": "https://github.com/Yeon-seong/todolist-typescript#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
